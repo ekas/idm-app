@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 const app = express();
 
 const allowedOrigins = process.env.WHITELIST_URLS.split(",");
-console.log(allowedOrigins);
+console.log("Whitelisted URLS: ", allowedOrigins);
 app.use(
   cors({
     origin: (origin, callback) => {
