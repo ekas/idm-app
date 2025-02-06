@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "90762eca-06c7-4bec-b0d1-d6a94483e8e0",
+		"name": "IDM App Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5144202"
+	},
+	"item": [
+		{
+			"name": "Get Classifications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/classifications",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"classifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"asasasas\",\n    \"classifier\": \"Document 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/classification",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"classification"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://localhost:3001",
+			"type": "string"
+		}
+	]
+}
