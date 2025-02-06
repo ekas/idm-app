@@ -1,4 +1,4 @@
-# React TODO
+# IDM App
 
 Project is build using the vuejs and being deployed over [Vercel](https://vercel.com/)
 
@@ -61,11 +61,17 @@ WHITELIST_URLS=http://localhost:3000,http://localhost:3002
 npm run dev
 ```
 
+- Step 6: After Starting Backend Server, you could test the API's using [Postman](https://www.postman.com/jp/downloads/) - please import [JSON](https://github.com/ekas/idm-app/blob/main/idm-app-api/IDM%20App%20Api.postman_collection.json).
+
+```bash
+npm run dev
+```
+
 This will run a local backend instance of the application `http://localhost:3001/`. If you change the backend port don't forget to update the `.env` file in the frontend folder
 
 ## Project Features
 
-- Accept CSV Files - Use [Sample CSV]()
+- Accept CSV Files - Use [Sample CSV](https://github.com/ekas/idm-app/blob/main/sample.csv)
 - Reads CSV Content and Classify the text
 - Classified Data is saved in PostgreSQL
 
