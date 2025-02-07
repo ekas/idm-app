@@ -75,7 +75,7 @@
 	"variable": [
 		{
 			"key": "API_URL",
-			"value": "http://localhost:3001",
+			"value": "https://idm-app-api.vercel.app",
 			"type": "string"
 		}
 	]

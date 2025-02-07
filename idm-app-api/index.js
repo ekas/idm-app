@@ -24,6 +24,10 @@ app.use(
 );
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Express JS on Vercel");
+});
+
 // Create a classification entry for text
 app.post("/classification", async (req, res) => {
   const { text, classifier } = req.body;
@@ -43,3 +47,5 @@ app.get("/classifications", async (req, res) => {
 app.listen(3001, () => {
   console.log("Server running on http://localhost:3001");
 });
+
+module.exports = app;
