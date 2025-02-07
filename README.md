@@ -2,7 +2,8 @@
 
 Project is build using the vuejs and being deployed over [Vercel](https://vercel.com/)
 
-[Demo]() is also available
+[Frontend Demo Link](https://idm-frontend-murex.vercel.app/) is also available
+[Backend API Link](https://idm-app-api.vercel.app/) is also available - To test with Postman
 
 ## Project Local Build Instructions
 
@@ -34,7 +35,7 @@ This will use `npm` to install project dependencies.
 - Step 3: Start the frontend project.
 
 ```bash
-npm run dev
+npm start
 ```
 
 This will run a local instance of the application `http://localhost:3000/`
@@ -58,7 +59,7 @@ WHITELIST_URLS=http://localhost:3000,http://localhost:3002
 - Step 6: Start the backend project.
 
 ```bash
-npm run dev
+npm start
 ```
 
 - Step 6: After Starting Backend Server, you could test the API's using [Postman](https://www.postman.com/jp/downloads/) - please import [JSON](https://github.com/ekas/idm-app/blob/main/idm-app-api/IDM%20App%20Api.postman_collection.json).
@@ -77,6 +78,10 @@ This will run a local backend instance of the application `http://localhost:3001
 
 ## Project Screenshots
 
-![Img 2](https://github.com/ekas/react-todo/blob/main/screenshots/image2.png)
+[Application Demo Video](https://github.com/ekas/idm-app/blob/main/assets/application_ui.mov)
+
+[Postman API Demo Video](https://github.com/ekas/idm-app/blob/main/assets/postman.mov)
+
+[Prisma Studio PostgreSQL cloud DB](https://github.com/ekas/idm-app/blob/main/assets/prisma_studio.mov)
 
 ## Thank You
