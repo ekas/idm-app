@@ -65,11 +65,7 @@ npm start
 
 - Step 6: After Starting Backend Server, you could test the API's using [Postman](https://www.postman.com/jp/downloads/) - please import [JSON](https://github.com/ekas/idm-app/blob/main/idm-app-api/IDM%20App%20Api.postman_collection.json).
 
-```bash
-npm run dev
-```
-
-This will run a local backend instance of the application `http://localhost:3001/`. If you change the backend port don't forget to update the `.env` file in the frontend folder
+This will run a local backend instance of the application `http://localhost:3001/`.
 
 ## Project Features
 
