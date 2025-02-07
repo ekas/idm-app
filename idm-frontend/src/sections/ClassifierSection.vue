@@ -1,23 +1,25 @@
 <template>
-  <div v-if="csvData.length === 0" class="card m-2 h-23">
-    <h2 class="font-bold">Upload File</h2>
-    <FileUploader :handleFileUpload="handleFileUpload" />
-  </div>
-  <div v-else class="selectionarea flex">
-    <DocumentSection v-if="!endOfCSV" :currentCSVIndex="currentCSVIndex" :csvData="csvData" />
-    <div v-else class="textarea h-full flex-1 flex flex-col w-full p-5">
-      <h2 class="font-semibold text-xl">
-        We have reached End of CSV file. Please click on reload to upload new data file.
-      </h2>
-      <Button label="Reload" class="mt-5 w-25" @click="handleReloadtBtn" />
+  <div>
+    <div v-if="csvData.length === 0" class="m-2 card h-23">
+      <h2 class="font-bold">Upload File</h2>
+      <FileUploader :handleFileUpload="handleFileUpload" />
     </div>
-    <DropdownSection
-      v-if="!endOfCSV"
-      v-model:classifierVal="classifierVal"
-      :handleNextBtn="handleNextBtn"
-    />
+    <div v-else class="flex selectionarea">
+      <DocumentSection v-if="!endOfCSV" :currentCSVIndex="currentCSVIndex" :csvData="csvData" />
+      <div v-else class="flex flex-col flex-1 w-full h-full p-5 textarea">
+        <h2 class="text-xl font-semibold">
+          We have reached End of CSV file. Please click on reload to upload new data file.
+        </h2>
+        <Button label="Reload" class="mt-5 w-25" @click="handleReloadtBtn" />
+      </div>
+      <DropdownSection
+        v-if="!endOfCSV"
+        v-model:classifierVal="classifierVal"
+        :handleNextBtn="handleNextBtn"
+      />
+    </div>
+    <Toast position="bottom-right" />
   </div>
-  <Toast position="bottom-right" />
 </template>
 
 <script setup>
@@ -27,13 +29,13 @@ import axios from 'axios'
 import { useToast } from 'primevue/usetoast'
 import DocumentSection from './DocumentSection.vue'
 import DropdownSection from './DropdownSection.vue'
+const BACKEND_API_URL = import.meta.env.VITE_BACKEND_API_URL
 
 const csvData = ref([])
 const csvClassifiedData = ref([])
 const classifierVal = ref(null)
 const currentCSVIndex = ref(0)
 const endOfCSV = ref(false)
-const BACKEND_API_URL = 'http://localhost:3001'
 const toast = useToast()
 
 const handleFileUpload = (event) => {

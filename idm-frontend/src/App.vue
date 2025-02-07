@@ -4,6 +4,8 @@ import Classifier from './sections/ClassifierSection.vue'
 </script>
 
 <template>
-  <TopBar />
-  <Classifier />
+  <div>
+    <TopBar />
+    <Classifier />
+  </div>
 </template>

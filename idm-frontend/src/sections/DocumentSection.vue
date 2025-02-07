@@ -1,11 +1,11 @@
 <template>
-  <div v-if="!endOfCSV" class="textarea h-full flex-1 flex flex-col w-full p-5">
-    <h2 class="font-semibold text-xl">Text from CSV Index: {{ currentCSVIndex }}</h2>
+  <div v-if="!endOfCSV" class="flex flex-col flex-1 w-full h-full p-5 textarea">
+    <h2 class="text-xl font-semibold">Text from CSV Index: {{ currentCSVIndex + 1 }}</h2>
     <Textarea
       :value="csvData[currentCSVIndex]"
       size="large"
       rows="3"
-      class="mt-5 h-full"
+      class="h-full mt-5"
       disabled
     />
   </div>
